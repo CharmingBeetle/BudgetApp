@@ -1,0 +1,1 @@
+This is a Budjet App created during the CFG Kickstarter JAvaScript 8 week course finishing Aug 2024. There are currently some bugs in the code and some features yet to be added such as the Edit and Delete function which I hope to update soon. 
