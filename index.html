@@ -1,0 +1,132 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Budget App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Anton&family=Archivo+Black&family=Bowlby+One&family=League+Spartan:wght@100..900&family=Pacifico&family=Rethink+Sans:ital,wght@0,400..800;1,400..800&family=Righteous&family=Roboto:ital@1&display=swap" rel="stylesheet">
+    <script src="/script.js"></script>
+
+</head>
+<div class="main-container">
+<body>
+<div class="bg-image">
+    <h1 class = "header">miss capital.</h1>
+    <h2 id="tagline" style ="text-align: center;">Your money. Made simple.</h2>
+
+  <div id="login" class="login">
+    <h2> Enter your login details</h2>
+
+    <form action="/action_page.php">
+    <label for="fname"></label>First Name</label>
+    <input type="text" class="textbox" id="fname" type="text" placeholder="first name">
+    <br><br>
+
+      <label for="username">Username</label>
+      <input class = "textbox" id = "username" type = "text" placeholder="username">
+      <br><br>
+
+      <label for="password">Password</label>
+      <input class = "textbox" id = "password" type = "password" placeholder="password">
+      <br><br>
+    </form>
+
+      <button class ="btn" onclick="login()" >Enter</button>
+
+  </div>
+
+<div class="container"> 
+
+    <h2 id="greet-el">Welcome back to your budget,  </h2>
+
+    <div class="row">
+        <div class="column" id="inc">
+            <h3>Incoming</h3>
+            <p><span>Insert your incomes for the month here:</span></p>
+            <form action="">
+            <label for="income">Income Name</label>
+            <br><br>
+            <input class="textbox" type="text" name="income" id="income" placeholder="eg. side hustle, tax refund, etc">
+            <br><br>
+            <label for="amount">Amount</label>
+            <br><br>
+            <input class="textbox" type="number" name="amount" id="amount" placeholder="1000">
+            <br><br>
+            </form>
+            
+        </div>
+
+
+        <div class="column" id="exp">
+            <h3>Expenses</h3>
+            <p><span>Insert your outgoings for the month here:</span></p>
+            <form action="">
+                <label for="expense">Expense Name</label>
+                <br><br>
+                <input class="textbox" type="text" name = "expense" id="expense" placeholder="eg. rent, groceries, etc.">
+                <br><br>
+                <label for="cost">Cost</label>
+                <br><br>
+                <input class="textbox" type="number" name="cost" id="cost" placeholder="300">
+                <br><br> 
+            </form>
+        </div>
+
+        <div class="error">
+          <span id = "input-error">Fields cannot be empty or invalid!</span>
+        </div>
+
+        <div class="addbtn">
+          <button id="totalMoney" class = "btn" onclick="totalMoney()">Add Item</button>
+        </div>
+    </div>
+    
+    <!--List  -->
+    <div class="list">
+      
+      <h2 id="listTitle">Your Incomes and Expenses</h2>
+       <div class="income-expense-container">
+    <div class="income-column column">
+        <h3>Income</h3>
+        <div id="income-list" class="list-container">
+            <!-- Income items will be added here -->
+        </div>
+    </div>
+    <div class="expense-column column">
+        <h3>Expenses</h3>
+        <div id="expense-list" class="list-container">
+            <!-- Expense items will be added here -->
+        </div>
+    </div>
+        
+    </div>
+    <!-- Edit and Delete buttons -->
+          <div class="edt-dlt">
+            <button class="edtbtn" id="pencil"> <svg viewBox="0 0 512 512" width="30" title="pencil-alt">
+    <path d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM124.1 339.9c-5.5-5.5-5.5-14.3 0-19.8l154-154c5.5-5.5 14.3-5.5 19.8 0s5.5 14.3 0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z" />
+  </svg></button>
+          <button type="reset" class="edtbtn" id = "trash"> <svg viewBox="0 0 448 512" width="25" title="trash-alt">
+    <path d="M32 464a48 48 0 0 0 48 48h288a48 48 0 0 0 48-48V128H32zm272-256a16 16 0 0 1 32 0v224a16 16 0 0 1-32 0zm-96 0a16 16 0 0 1 32 0v224a16 16 0 0 1-32 0zm-96 0a16 16 0 0 1 32 0v224a16 16 0 0 1-32 0zM432 32H312l-9.4-18.7A24 24 0 0 0 281.1 0H166.8a23.72 23.72 0 0 0-21.4 13.3L136 32H16A16 16 0 0 0 0 48v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16V48a16 16 0 0 0-16-16z" />
+            </svg></button>
+  
+            </div>
+</div>
+<!--Budget Total  -->
+          <div class="total">
+          <h1>Balance Total</h1>
+        <p id="total">£0</p>
+    </div>
+</div>
+         
+  
+      
+</div>
+
+</div>
+</div>
+</body>
+</div>
+</html>
