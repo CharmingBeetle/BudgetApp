@@ -4,7 +4,7 @@
 This BudgetApp is an short project developed as part of the Code First Girls JavaScript course. It demonstrates fundamental JavaScript concepts through a practical budget tracking application. 
 
 ## 🌐 Hosting Link
-[Miss Capital Budget App](misscapital.netlify.app)
+[Miss Capital Budget App](https://misscapital.netlify.app)
 
 ## 👩‍💻 Team Members
 - Nina Thomas(https://github.com/CharmingBeetle)
