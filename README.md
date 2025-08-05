@@ -1,4 +1,4 @@
-# Miss Capital Budjet App
+# Miss Capital Budget App
 
 ## 📚 Project Overview
 This BudgetApp is an short project developed as part of the Code First Girls JavaScript course. It demonstrates fundamental JavaScript concepts through a practical budget tracking application. 
